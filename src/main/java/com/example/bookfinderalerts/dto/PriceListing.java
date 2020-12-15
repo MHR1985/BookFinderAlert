@@ -1,6 +1,8 @@
 package com.example.bookfinderalerts.dto;
 
-public class PriceListing {
+import java.io.Serializable;
+
+public class PriceListing implements Serializable {
 
     private String price;
 

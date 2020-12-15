@@ -1,9 +1,10 @@
 package com.example.bookfinderalerts.dto;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BookListing {
+public class BookListing implements Serializable {
 
     private String id;
 
