@@ -6,25 +6,25 @@ import java.util.List;
 
 public class BookListing implements Serializable {
 
-    private String id;
+    private String bookId;
 
     private List<PriceListing> priceListings = new ArrayList<>();
 
-    public BookListing(String id) {
-        this.id = id;
+    public BookListing(String bookId) {
+        this.bookId = bookId;
     }
 
-    public BookListing(String id, List<PriceListing> priceListings) {
-        this.id = id;
+    public BookListing(String bookId, List<PriceListing> priceListings) {
+        this.bookId = bookId;
         this.priceListings = priceListings;
     }
 
-    public String getId() {
-        return id;
+    public String getBookId() {
+        return bookId;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setBookId(String bookId) {
+        this.bookId = bookId;
     }
 
     public List<PriceListing> getPriceListings() {
