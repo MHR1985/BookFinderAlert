@@ -30,10 +30,9 @@ public class GoogleScraper {
             String price = elementsTd.get(1).getText();
             String sellerLink = elementsTd.get(0).findElement(By.tagName("a")).getAttribute("href");
             prices.add(new PriceListing(price,sellerLink,seller));
-
-
         }
-        BookListing bookListing = new BookListing(id,prices);
+        String bookTitle = driver.findElement(By.className("gb-volume-title")).getText();
+        BookListing bookListing = new BookListing(id,bookTitle,prices);
         return bookListing;
     }
 

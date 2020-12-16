@@ -16,7 +16,7 @@ import java.util.List;
 public class ProducerServiceCallback {
 
     private static String topic = "books";
-    private static Logger logger = LoggerFactory.getLogger(ProducerService.class);
+    private static Logger logger = LoggerFactory.getLogger(ProducerServiceCallback.class);
 
     @Autowired
     private KafkaTemplate<String,String> template;

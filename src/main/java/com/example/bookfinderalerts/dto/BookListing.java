@@ -8,14 +8,13 @@ public class BookListing implements Serializable {
 
     private String bookId;
 
+    private String bookTitle;
+
     private List<PriceListing> priceListings = new ArrayList<>();
 
-    public BookListing(String bookId) {
+    public BookListing(String bookId, String bookTitle, List<PriceListing> priceListings) {
         this.bookId = bookId;
-    }
-
-    public BookListing(String bookId, List<PriceListing> priceListings) {
-        this.bookId = bookId;
+        this.bookTitle = bookTitle;
         this.priceListings = priceListings;
     }
 
@@ -25,6 +24,14 @@ public class BookListing implements Serializable {
 
     public void setBookId(String bookId) {
         this.bookId = bookId;
+    }
+
+    public String getBookTitle() {
+        return bookTitle;
+    }
+
+    public void setBookTitle(String bookTitle) {
+        this.bookTitle = bookTitle;
     }
 
     public List<PriceListing> getPriceListings() {
