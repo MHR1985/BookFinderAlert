@@ -31,7 +31,7 @@ public class BooklistController {
             GoogleScraper scraper = new GoogleScraper();
             List<BookListing> bookListing = new ArrayList<>();
             for(String book:subscribedBooks){
-                bookListing.add(scraper.scrabe(book));
+                bookListing.add(scraper.scrape(book));
             }
             Gson gson = new GsonBuilder().disableHtmlEscaping().setPrettyPrinting().create();
             service.sendMessageCallBack(username,gson.toJson(bookListing));
